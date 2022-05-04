@@ -1,0 +1,143 @@
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/Logo.webp",
+          "logo_width": 100,
+          "menu": "main-menu"
+        }
+      },
+      "featured-collections": {
+        "type": "featured-collections",
+        "blocks": {
+          "1cc6c2e8-65b1-4274-bff3-ca00bc1b691f": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/main-slider-1.webp",
+              "title": "Make a scene.",
+              "description": "Everything you need for a great party, from decor to drinks & games.",
+              "color": "#00966e",
+              "cta_text": "Find your scene",
+              "collection": "frontpage"
+            }
+          },
+          "d7deeeb2-bf93-4747-8503-00d1b8daf283": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_289.jpg",
+              "title": "Make it extra.",
+              "description": "Once you’ve chosen a scene, you can dial it up with fun a la carte add-ons.",
+              "color": "#85abbd",
+              "cta_text": "shop party supplies",
+              "collection": "frontpage"
+            }
+          },
+          "d39c008d-3640-406e-9e07-2daacb7ea6fa": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_2891.jpg",
+              "title": "Make it joyful.",
+              "description": "Create the arrangement of your dreams with DIY kits from Wild & Flowers.",
+              "color": "#e3ff21",
+              "cta_text": "shop florals",
+              "collection": "frontpage"
+            }
+          },
+          "76084c03-42f0-468e-ba52-7b74d1ea6d07": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_2892.jpg",
+              "title": "Make it happen.",
+              "description": "Need a bartender, caterer, or DJ? Just add  to cart. It’s that easy.",
+              "color": "#bf91c4",
+              "cta_text": "Browse vendors",
+              "collection": "frontpage"
+            }
+          }
+        },
+        "block_order": [
+          "1cc6c2e8-65b1-4274-bff3-ca00bc1b691f",
+          "d7deeeb2-bf93-4747-8503-00d1b8daf283",
+          "d39c008d-3640-406e-9e07-2daacb7ea6fa",
+          "76084c03-42f0-468e-ba52-7b74d1ea6d07"
+        ],
+        "settings": {
+          "title": "Having fun <span>101<\/span>"
+        }
+      },
+      "banners": {
+        "type": "banners",
+        "blocks": {
+          "823ea8bf-6d57-42e0-bd91-4709d3db03c1": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/banner-1.png",
+              "title": "Housewarming Gifts for the Host",
+              "cta_text": "Discover them all",
+              "cta_link": "#"
+            }
+          },
+          "6e253692-9f98-48bc-b991-86a292a50707": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_324_2.png",
+              "title": "The Limited-Edition Holiday Scene",
+              "cta_text": "shop the scene",
+              "cta_link": "#"
+            }
+          }
+        },
+        "block_order": [
+          "823ea8bf-6d57-42e0-bd91-4709d3db03c1",
+          "6e253692-9f98-48bc-b991-86a292a50707"
+        ],
+        "settings": {
+        }
+      },
+      "featured-scenes": {
+        "type": "featured-scenes",
+        "blocks": {
+          "cac34eee-5a29-4ca7-ac4e-662ea7f0c7ce": {
+            "type": "scene_img",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/img.png"
+            }
+          },
+          "716e20bf-4f55-4309-8a89-609fa08c484b": {
+            "type": "scene_img",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/depositphotos_29930387-stock-photo-barman-pouring-a-cocktail-into.webp"
+            }
+          }
+        },
+        "block_order": [
+          "cac34eee-5a29-4ca7-ac4e-662ea7f0c7ce",
+          "716e20bf-4f55-4309-8a89-609fa08c484b"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/top.png",
+          "title": "<span class=\"featured-scene--1\">The Scene<\/span> <span class=\"featured-scene--2\">Supper Club<\/span>",
+          "cta_text": "Shop Now",
+          "cta_link": "#"
+        }
+      },
+      "featured-products": {
+        "type": "featured-products",
+        "settings": {
+          "title": "Party a la <br>Carte",
+          "cta_text": "Shop All",
+          "collection": "frontpage"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Default": {
+    }
+  }
+}

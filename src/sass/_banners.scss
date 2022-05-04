@@ -1,0 +1,54 @@
+.banners {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+.banner {
+  position: relative;
+    
+  &__text {
+    position: absolute;
+    bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.5rem;
+    row-gap: 2rem;
+    color: $color-white;
+  }
+
+  &__title {
+    font-family: 'GT-Super-Display-Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+    text-align: center;
+
+    @include respond(tab-land) {
+      font-size: 6.4rem;
+      line-height: 6.4rem;
+    }
+  }
+
+  &__cta {
+    font-family: 'Platform-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
+  }
+}

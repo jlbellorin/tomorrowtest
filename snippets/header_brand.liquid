@@ -1,0 +1,17 @@
+<h1 class="header__brand">
+  <a class="header__brand-link" href="{{ routes.root_url }}">
+    {%- if section.settings.logo != blank -%}
+      {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+      <div class="header__brand-img">
+        <img 
+          srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+          src="{{ section.settings.logo | img_url: image_size }}"
+          loading="lazy"
+          alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+        >
+      </div>
+    {%- else -%}
+      <span class="header__brand-text">{{ shop.name }}</span>
+    {%- endif -%}
+  </a>
+</h1>

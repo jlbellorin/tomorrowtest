@@ -1,0 +1,26 @@
+<header class="header" x-data="{ mobileMenuOpen: false, searchBarOpen: false }">
+  {% render 'header_brand' %}
+  {% render 'header_nav' %}
+  {% render 'header_icons' %}
+  {% render 'header_burger' %}
+  {% render 'header_mobile-menu' %}
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Heading Navigation Menu"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,187 @@
+
+.header {
+  display: grid;
+  grid-template-areas: "brand icons burger";
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  column-gap: 2.7rem;
+  padding: 1.6rem 2rem;
+  max-width: 136rem;
+  margin: 0 auto;
+
+  &__brand {
+    grid-area: brand;
+    justify-self: start;
+    margin: 0;
+    line-height: 0;
+    font-family: 'GT-Super-Display-Light';
+  }
+
+  &__brand-img {
+    width: 10.5rem;
+  
+    @include respond(tab-land) {
+      width: 18rem;
+    }
+  }
+
+  &__nav {
+    display: none;
+    grid-area: nav;
+    justify-self: center;
+    column-gap: 2.18rem;
+    
+    a {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    
+    @include respond(tab-land) {
+      display: flex;
+    }
+  }
+
+  &__nav--nested {
+    position: relative;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__nav-nested-items {
+    position: absolute;
+    margin-top: 1rem;
+    background-color: $color-white;
+    border: 1px solid $color-lightgrey;
+    width: 30rem;
+    right: 0;
+
+    a {
+      padding: 1rem;
+    }
+
+    a:hover,
+    a:active {
+      background-color: $color-lightgrey;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    grid-area: icons;
+    justify-self: center;
+    column-gap: 2.7rem;
+    
+    @include respond(tab-land) {
+      column-gap: 1.56rem;
+    }
+  }
+
+  &__search {
+    position: relative;
+  }
+
+  &__search-input {
+    position: absolute;
+    right: -1rem;
+    transform: translateY(50%);
+    margin-top: 1rem;
+    font-family: "Platform-Regular";
+    color: inherit;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    border: 1px solid $color-lightgrey;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+  
+  &__cart {
+    position: relative;
+  }
+  
+  &__cart-bubble {
+    background-color: $color-lightgrey;
+    display: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.5rem;
+    right: -1rem;
+  }
+  
+  &__cart-bubble--visible {
+    display: flex;
+  }
+  
+  &__burger {
+    grid-area: burger;
+    cursor: pointer;
+
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color-white;
+    width: 90vw;
+    height: 100vh;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    nav {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+  
+      a {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+  
+    @include respond(tab-land) {
+      visibility: hidden;
+    }
+  }
+  
+  &__menu-item--nested {
+    display: flex;
+  }
+  
+  @include respond(tab-land) {
+    grid-template-areas: "brand nav icons";
+    column-gap: 2.18rem;
+    padding: 2.6rem 1rem;
+  }
+}
+
+.modal-background {
+  position: fixed;
+  background-color: $color-black;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}

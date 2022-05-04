@@ -1,0 +1,27 @@
+<div class="header__icons">
+  <div class="header__search">
+    <form action="{{ routes.search_url }}" method="get">
+      <div>
+        <input 
+          class="header__search-input" 
+          type="search" 
+          name="q" 
+          placeholder="Search" 
+          x-show="searchBarOpen" 
+          @click.away="searchBarOpen = false">
+        <a href="#" x-on:click="searchBarOpen = !searchBarOpen">
+          {% render 'icon-search' %}
+        </a>
+      </div>
+    </form>
+  </div>
+  <div class="header__cart">
+    <a href="{{ routes.cart_url }}">
+      {% render 'icon-shopping-bag' %}
+      <div 
+        class="header__cart-bubble {% if cart.item_count > 0 %}header__cart-bubble--visible{% endif %}">
+        {{ cart.item_count }}
+      </div>
+    </a>
+  </div>
+</div>

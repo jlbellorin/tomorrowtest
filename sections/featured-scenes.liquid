@@ -1,0 +1,77 @@
+<section id="featured-scenes">
+  <div class="featured-scenes">
+    <div class="featured-scenes__img">
+      <img src="{{ section.settings.image | image_url }}" alt="{{ section.settings.image.alt }}">
+    </div>
+    <div class="featured-scene">
+      <h3 class="featured-scene__title">{{ section.settings.title }}</h3>
+      <div class="featured-scene__slider">
+        <div class="featured-scene__slider-container swiper">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'scene_img' %}
+                  {% if block.settings.image.alt != blank %}
+                    {% assign imageAlt = block.settings.image.alt %}
+                  {% else %}
+                    {% assign imageAlt = block.settings.title | append: ' Image' %}
+                  {% endif %}
+                  <div class="featured-scene__slide swiper-slide">
+                    <img src="{{ block.settings.image | image_url }}" alt="{{ imageAlt }}">
+                  </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="slider-prev">
+          {% render 'icon-arrow-left' %}
+        </div>
+        <div class="slider-next">
+          {% render 'icon-arrow-right' %}
+        </div>
+      </div>
+      <a class="featured-scene__cta" href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }}</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Scenes",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link"
+    }
+  ],
+  "blocks": [
+  {
+    "name": "Scene Image",
+    "type": "scene_img",
+    "settings": [
+      {
+       "type": "image_picker",
+       "id": "image",
+       "label": "Image"
+      }
+    ]
+  }
+]
+}
+{% endschema %}

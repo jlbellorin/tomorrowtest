@@ -1,0 +1,65 @@
+#featured-scenes {
+  @include respond(tab-land) {
+    display: none;
+  }
+}
+
+.featured-scene {
+  background-color: $color-dark-red;
+  padding: 2.5rem;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.5rem;
+
+  &__slide {
+    width: 18rem !important;
+    height: 18rem !important;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &--1 {
+    font-family: 'Platform-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  &--2 {
+    font-family: 'GT-Super-Display-Light-Italic';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: center;
+  }
+
+  &__cta {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+  
+  &__slider {
+    border-radius: 50%;
+    width: 100%;
+    position: relative;
+  }
+  
+  &__slider-container {
+    width: 18rem;
+  }
+}

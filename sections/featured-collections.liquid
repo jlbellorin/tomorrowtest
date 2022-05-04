@@ -1,0 +1,91 @@
+<section id="featured-collections">
+  <h2 class="section__title">{{ section.settings.title }}</h2>
+  <div class="featured-collections__slider swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'collection' %}
+            {% if block.settings.image.alt != blank %}
+              {% assign imageAlt = block.settings.image.alt %}
+            {% else %}
+              {% assign imageAlt = block.settings.title | append: ' Image' %}
+            {% endif %}
+            {% capture bgStyle %}
+              style="background-color: {{ block.settings.color }};"
+            {% endcapture %}
+            <div class="featured-collections__slide swiper-slide" {{bgStyle}} {{ block.shopify_attributes }}>
+              <div class="featured-collections__slide-container">
+                <div class="featured-collections__img">
+                  <img src="{{ block.settings.image | image_url }}" alt="{{ imageAlt }}">
+                </div>
+                <div class="featured-collections__container">
+                  <div class="featured-collections__info">
+                    <h3 class="featured-collections__title">{{ block.settings.title }}</h3>
+                    <p class="featured-collections__description">{{ block.settings.description }}</p>
+                    <a class="section__cta" href="{{ block.settings.collection.url }}">{{ block.settings.cta_text }}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+    <div class="featured-collections__arrow slider__arrow-prev">
+      {% render 'icon-slider-left' %}
+    </div>
+    <div class="featured-collections__arrow slider__arrow-next">
+      {% render 'icon-slider-right' %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+  {
+    "name": "Collection",
+    "type": "collection",
+    "settings": [
+      {
+       "type": "image_picker",
+       "id": "image",
+       "label": "Image"
+      },
+      {
+       "type": "text",
+       "id": "title",
+       "label": "Title"
+      },
+      {
+       "type": "textarea",
+       "id": "description",
+       "label": "Description"
+      },
+      {
+       "type": "color",
+       "id": "color",
+       "label": "Color"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }
+    ]
+  }
+]
+}
+{% endschema %}

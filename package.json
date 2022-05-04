@@ -1,0 +1,12 @@
+{
+  "name": "tomorrow-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "sass --watch ./src/sass/main.scss ./assets/styles.css"
+  },
+  "author": "José Bellorín",
+  "license": "ISC"
+}

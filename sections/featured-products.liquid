@@ -1,0 +1,56 @@
+<section id="featured-products">
+  <h2 class="section__title">{{ section.settings.title }}</h2>
+  <div class="featured-products">
+    <div class="featured-products__slider swiper">
+      <div class="swiper-wrapper">
+        {% for product in section.settings.collection.products limit:4 %}
+          <div class="featured-products__slide swiper-slide">
+            <div class="featured-products__img">
+              <img src="{{ product.featured_image | image_url }}" alt="{{ product.featured_image.alt }}">
+            </div>
+            <div class="featured-products__info">
+              <h3 class="featured-products__title">{{ product.title }}</h3>
+              <p class="featured-products__price">{{ product.price | money }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="featured-products__controls slider__arrow-prev">
+      <div class="featured-products__arrow">
+        {% render 'icon-black-arrow-left' %}
+      </div>
+    </div>
+    <div class="featured-products__controls slider__arrow-next">
+      <div class="featured-products__arrow">
+        {% render 'icon-black-arrow-right' %}
+      </div>
+    </div>
+  </div>
+  <div class="featured-products__cta">
+    <a class="section__cta" href="{{ section.settings.collection.url }}">{{ section.settings.cta_text }}</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ]
+}
+{% endschema %}

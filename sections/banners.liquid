@@ -1,0 +1,59 @@
+<section id="banners">
+  <div class="banners">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'banner' %}
+          {%- comment -%} Assigning image alt {%- endcomment -%}
+          {% if block.settings.image.alt != blank %}
+            {% assign imageAlt = block.settings.image.alt %}
+          {% else %}
+            {% assign imageAlt = block.settings.title | append: ' Image' %}
+          {% endif %}
+          <div class="banner">
+            <div class="banner__img">
+              <img src="{{ block.settings.image | image_url }}" alt="{{ imageAlt }}">
+            </div>
+            <div class="banner__text">
+              <h3 class="banner__title">{{ block.settings.title }}</h3>
+              <a class="banner__cta" href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
+            </div>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Banners",
+  "blocks": [
+  {
+    "name": "Banner",
+    "type": "banner",
+    "settings": [
+      {
+       "type": "image_picker",
+       "id": "image",
+       "label": "Image"
+      },
+      {
+       "type": "text",
+       "id": "title",
+       "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+      },
+      {
+        "type": "url",
+        "id": "cta_link",
+        "label": "CTA Link"
+      }
+    ]
+  }
+]
+}
+{% endschema %}

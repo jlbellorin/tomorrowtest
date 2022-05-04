@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "header": {
+      "name": "Header",
+      "settings": {
+        "logo":{
+          "label":"Logo image"
+        },
+        "logo_width":{
+          "unit":"px",
+          "label":"Custom logo width"
+        }
+      }
+    }
+  }
+}
