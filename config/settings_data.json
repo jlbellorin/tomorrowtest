@@ -5,7 +5,6 @@
         "type": "header",
         "settings": {
           "logo": "shopify:\/\/shop_images\/Logo.webp",
-          "logo_width": 100,
           "menu": "main-menu"
         }
       },
@@ -15,7 +14,7 @@
           "1cc6c2e8-65b1-4274-bff3-ca00bc1b691f": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/main-slider-1.webp",
+              "image": "shopify:\/\/shop_images\/Rectangle299.png",
               "title": "Make a scene.",
               "description": "Everything you need for a great party, from decor to drinks & games.",
               "color": "#00966e",
@@ -26,7 +25,7 @@
           "d7deeeb2-bf93-4747-8503-00d1b8daf283": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Rectangle_289.jpg",
+              "image": "shopify:\/\/shop_images\/Rectangle289.png",
               "title": "Make it extra.",
               "description": "Once you’ve chosen a scene, you can dial it up with fun a la carte add-ons.",
               "color": "#85abbd",
@@ -37,7 +36,7 @@
           "d39c008d-3640-406e-9e07-2daacb7ea6fa": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Rectangle_2891.jpg",
+              "image": "shopify:\/\/shop_images\/Rectangle2891.png",
               "title": "Make it joyful.",
               "description": "Create the arrangement of your dreams with DIY kits from Wild & Flowers.",
               "color": "#e3ff21",
@@ -48,7 +47,7 @@
           "76084c03-42f0-468e-ba52-7b74d1ea6d07": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Rectangle_2892.jpg",
+              "image": "shopify:\/\/shop_images\/Rectangle2892.png",
               "title": "Make it happen.",
               "description": "Need a bartender, caterer, or DJ? Just add  to cart. It’s that easy.",
               "color": "#bf91c4",
@@ -108,7 +107,7 @@
           "716e20bf-4f55-4309-8a89-609fa08c484b": {
             "type": "scene_img",
             "settings": {
-              "image": "shopify:\/\/shop_images\/depositphotos_29930387-stock-photo-barman-pouring-a-cocktail-into.webp"
+              "image": "shopify:\/\/shop_images\/img.png"
             }
           }
         },
@@ -128,7 +127,7 @@
         "settings": {
           "title": "Party a la <br>Carte",
           "cta_text": "Shop All",
-          "collection": "frontpage"
+          "collection": "featured-products"
         }
       }
     },
