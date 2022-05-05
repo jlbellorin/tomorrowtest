@@ -2,6 +2,7 @@ $color-dark-red: #730503;
 $color-offwhite: #F4EDE5;
 $color-white: #FFFFFF;
 $color-black: #000000;
+$color-black--shadow: #00000080;
 $color-lightgrey: #e5e7eb;
 
 *,
@@ -132,4 +133,58 @@ img {
   margin: auto;
   text-decoration: unset;
   border-bottom: 1px solid $color-black;
+}
+
+.sidecart {
+  position: fixed;
+  background-color: $color-white;
+  top: 0;
+  right: 0;
+  width: 90vw;
+  height: 100vh;
+  z-index: 100;
+
+  @include respond(tab-land) {
+    width: 40vw;
+  }
+}
+
+.sidecart-items {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+
+  li {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+  }
+}
+
+.bg-sidecart,
+.modal-background {
+  position: fixed;
+  background-color: $color-black--shadow;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.sidecart,
+.bg-sidecart {
+  display: none;
+}
+
+.sidecart.active,
+.bg-sidecart.active {
+  display: block;
 }

@@ -4,7 +4,7 @@
     <div class="featured-products__slider swiper">
       <div class="swiper-wrapper">
         {% for product in section.settings.collection.products limit:4 %}
-          <div class="featured-products__slide swiper-slide">
+          <div class="featured-products__slide swiper-slide" data-variant-id="{{ product.first_available_variant.id }}">
             <div class="featured-products__img">
               <img src="{{ product.featured_image | image_url }}" alt="{{ product.featured_image.alt }}">
             </div>
